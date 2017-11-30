@@ -1,0 +1,17 @@
+body {
+	font-family: 'Metal Mania', cursive;
+	color: white;
+	background-color: black;
+}
+
+h1 {
+	text-align: center;
+}
+
+.jumbotron {
+	background-color: black;
+}
+
+img {
+	width: 100%;
+}
