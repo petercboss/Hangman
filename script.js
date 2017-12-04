@@ -38,6 +38,7 @@ var rightorwrong = function(letter) {
 	}
 }
 
+// right letter function
 var right = function(letter) {
 	for (var j = 0; j < currentBand.length; j++) {
 		if (currentBand[j] === letter) {
@@ -51,6 +52,7 @@ var right = function(letter) {
 	};	
 }
 
+// wrong letter function and puts guesses into array for no repeat
 var wrong = function(letter) {
 	if (guesses >= 1) {
 		if (guessArray.indexOf(letter) < 0) {
