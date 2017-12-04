@@ -10,6 +10,7 @@ var screenWord = document.getElementById("word");
 // resets everything but wins to 0
 var reset = function() {
 	guesses = 10;
+	guessArray = []
 	answer = [];
 	currentBand = bands[Math.floor(Math.random() * bands.length)];
 	for (var i = 0; i < currentBand.length; i++) {
@@ -52,9 +53,13 @@ var right = function(letter) {
 
 var wrong = function(letter) {
 	if (guesses >= 1) {
-		guesses--;
-		screenWrong.innerHTML += `${letter}, `;
-		screenGuesses.innerHTML = guesses;
+		if (guessArray.indexOf(letter) < 0) {
+			guesses--;
+			guessArray.push(letter);
+			screenWrong.innerHTML = guessArray;
+			screenGuesses.innerHTML = guesses;
+		}
+		else {};
 	}
 
 	else {
